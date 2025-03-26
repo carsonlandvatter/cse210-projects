@@ -33,7 +33,7 @@ public class Journal
         {
             foreach (Entry entry in _entries)
             {
-                outputFile.WriteLine($"{entry._date}~~{entry._promptText}~~{entry._entryText}");
+                outputFile.WriteLine($"{entry._date}~~{entry._promptText}~~{entry._entryText}~~{entry._mood}");
             }
         }
     }
@@ -52,9 +52,9 @@ public class Journal
         {
             string[] parts = line.Split("~~");
 
-            if (parts.Length == 3)
+            if (parts.Length == 4)
             {
-                Entry entry = new Entry(parts[1], parts[2]);
+                Entry entry = new Entry(parts[1], parts[2], parts[3]);
                 entry._date = parts[0];
                 _entries.Add(entry);
             }

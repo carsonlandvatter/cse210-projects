@@ -5,7 +5,9 @@ public class Entry
     public string _promptText;
     public string _entryText;
 
-    public Entry(string prompt, string response)
+    public string _mood;
+
+    public Entry(string prompt, string response, string mood)
     {
         _date = DateTime.Now.ToString("yyyy-MM-dd");
         //stores today's date
@@ -13,6 +15,8 @@ public class Entry
         //saves the prompt
         _entryText = response;
         //saves the response
+        _mood = mood;
+
     }
     public void Display()
     {
@@ -20,6 +24,7 @@ public class Entry
         Console.WriteLine($"Date: {_date}");
         Console.WriteLine($"Prompt: {_promptText}");
         Console.WriteLine($"Response: {_entryText}");
+        Console.WriteLine($"Mood: {_mood}");
         Console.WriteLine();
     }
 }

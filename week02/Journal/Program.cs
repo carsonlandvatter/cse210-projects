@@ -1,3 +1,4 @@
+//Exceeded Requirements by saving another item to the journal entries. I included "mood" within each entry.
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -30,7 +31,10 @@ class Program
             Console.WriteLine(prompt);
             string response = Console.ReadLine();
 
-            Entry entry = new Entry(prompt, response);
+            Console.Write("How would you describe your mood today? ");
+            string mood = Console.ReadLine();
+
+            Entry entry = new Entry(prompt, response, mood);
             journal.AddEntry(entry);
         }
         else if (choices == "2")

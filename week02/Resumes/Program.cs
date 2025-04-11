@@ -4,32 +4,30 @@ class Program
 {
     static void Main(string[] args)
     {
-        Job job1 = new Job();
-        // This is creating an instance for job1
+        Job firstJob = new Job();
+        //first instance
 
-        job1._company = "Verizon";
-        job1._jobTitle = "Software Engineer";
-        job1._startYear = 2024;
-        job1._endYear = 2026;
+        firstJob._company = "Verizon Wireless";
+        firstJob._jobTitle = "Technology Consultant";
+        firstJob._startYear = 2024;
+        firstJob._endYear = 2025;
 
-        Job job2 = new Job();
-        //This creates an instance for job2
+        Job secondJob = new Job();
+        //second instance
 
-        job2._company = "EOS Fitness";
-        job2._jobTitle = "Fitness Counselor";
-        job2._startYear = 2022;
-        job2._endYear = 2023;
+        secondJob._company = "Apple";
+        secondJob._jobTitle = "Technical Specialist";
+        secondJob._startYear = 2026;
+        secondJob._endYear = 2028;
 
-        Resume myresume = new Resume();
-        //This creates an instance for myresume
+        Resume jobResume = new Resume();
+        //resume instance
 
-        myresume._name = "Carson Landvatter";
-        myresume._jobs.Add(job1);
-        //This appends the job to the list
-        myresume._jobs.Add(job2);
+        jobResume._jobs.Add(firstJob);
+        jobResume._jobs.Add(secondJob);
+        //appending the instance of the first job and second job to the _jobs list.
 
-        myresume.DisplayResumeDetails();
-        //This displays the resume information
-        
+        jobResume.DisplayResume();
+        //Calling the display method.
     }
 }

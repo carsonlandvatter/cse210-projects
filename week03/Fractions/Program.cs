@@ -5,20 +5,26 @@ class Program
 {
     static void Main(string[] args)
     {
-        Fraction f1 = new Fraction();
-        Console.WriteLine(f1.GetFractionString());
-        Console.WriteLine(f1.GetDecimalValue());
+        //Creates the fractions
+        Fraction fraction1 = new Fraction(); //1/1
 
-        Fraction f2 = new Fraction(5);
-        Console.WriteLine(f2.GetFractionString());
-        Console.WriteLine(f2.GetDecimalValue());
+        Fraction fraction2 = new Fraction(6); //6/1
+        
+        Fraction fraction3 = new Fraction(6, 7); //6/7
 
-        Fraction f3 = new Fraction(3, 4);
-        Console.WriteLine(f3.GetFractionString());
-        Console.WriteLine(f3.GetDecimalValue());
+        //This is how you set new values using the setters: 
+        fraction1.SetTop(3);
+        fraction1.SetBottom(4);
 
-        Fraction f4 = new Fraction(1, 3);
-        Console.WriteLine(f4.GetFractionString());
-        Console.WriteLine(f4.GetDecimalValue());
+        fraction2.SetTop(8);
+        fraction2.SetBottom(5);
+
+        fraction3.SetTop(9);
+        fraction3.SetBottom(2);
+
+        //This is how you get the fractions.
+        Console.WriteLine($"{fraction1.GetFractionString()}");
+        Console.WriteLine($"{fraction2.GetDecimalValue()}");
+        Console.WriteLine($"{fraction3.GetFractionString()}");
     }
 }

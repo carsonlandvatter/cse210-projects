@@ -1,3 +1,4 @@
+//Included an ending message for when user clicks 4. There will be a display message thanking the user for setting aside time for mindfulness.
 using System;
 using System.ComponentModel.Design;
 

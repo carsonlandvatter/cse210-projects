@@ -20,7 +20,7 @@ public class GoalManager
         {
             Console.WriteLine($"You have {_score} points.");
             Console.WriteLine();
-            Console.Write("Menu Options:\n  1. Create New Goal\n  2. List Goals\n  3. Save Goals\n  4. Load Goals\n  5. Record Event\n  6. Quit\nSelect a choice from the menu: ");
+            Console.Write("Menu Options:\n  1. Create New Goal\n  2. List Goals\n  3. Save Goals\n  4. Load Goals\n  5. Record Event\n  6. Quit\n  7. View Affirmations\nSelect a choice from the menu: ");
             menuChoice = int.Parse(Console.ReadLine());
 
             if (menuChoice == 1)
@@ -47,6 +47,12 @@ public class GoalManager
             {
                 Console.WriteLine("Thank you for making and entering your goals. Hope you accomplish all of them.");
                 return;
+            }
+            else if (menuChoice == 7)
+            {
+                Console.WriteLine("You are smart, you are brave, you are brilliant.");
+                Console.WriteLine("You can accomplish anything you set your mind to.");
+                Console.WriteLine("You are a child of God.");
             }
         }
     }
